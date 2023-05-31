@@ -3,4 +3,5 @@ AFINN is a lexicon of English words rated for valence with an integer between mi
 The purpose of this project is to flag headlines that include words with AFINN scores of -4 or -5.
 There are three files:
 1. 'generate-bloom-filter.py': Using two hash functions to create a hash table of size 1000 bit-vector with the 'bad' words (63 words with AFINN scores of -4 or -5). Also, the probability of binary data getting corrupt is high in its raw form, So binary-to-text encoding: Base64 is used to convert hash table into text.
-2. ' 
+2. 'bloomfilter64.txt': the transformed text form of hash table that will be uploaded to the hadoop file system on google cloud platform.
+3. 'dstream-with-bloomfilter.py':  
